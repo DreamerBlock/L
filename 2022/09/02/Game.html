@@ -130,17 +130,6 @@ window.onload = wrap_img;
 
 <div class="container" id="notebook-container">
         
-<div class="cell border-box-sizing text_cell rendered">
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<hr>
-<p>title: Old RPG
-layout: post</p>
-<h2 id="description:-This-is-a-small-text-game-Ive-been-working-on">description: This is a small text game Ive been working on<a class="anchor-link" href="#description:-This-is-a-small-text-game-Ive-been-working-on"> </a>
-</h2>
-</div>
-</div>
-</div>
     
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -199,7 +188,7 @@ layout: post</p>
 <span class="k">global</span> <span class="n">controls</span>
 <span class="n">controls</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="n">controls</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
-    <span class="s2">"Movement"</span><span class="p">:</span> <span class="s2">"up, down, left, right, north, south, east, weast"</span><span class="p">,</span>
+    <span class="s2">"Movement"</span><span class="p">:</span> <span class="s2">"up, down, left, right, north, south, east, west"</span><span class="p">,</span>
     <span class="s2">"Actions"</span><span class="p">:</span> <span class="s2">"move, stats, location, comands, actions"</span>
 <span class="p">})</span>
 
@@ -883,14 +872,17 @@ layout: post</p>
     <span class="n">Lv</span> <span class="o">=</span> <span class="mi">1</span>
     <span class="n">level_1</span> <span class="o">=</span> <span class="kc">True</span>
     <span class="n">EXP</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Congratsulation on making it to level 1"</span><span class="p">)</span>
   <span class="k">elif</span> <span class="n">EXP</span> <span class="o">==</span> <span class="mi">30</span> <span class="ow">and</span> <span class="n">level_2</span> <span class="o">==</span> <span class="kc">False</span><span class="p">:</span>
     <span class="n">Lv</span> <span class="o">=</span> <span class="mi">2</span>
     <span class="n">level_2</span> <span class="o">==</span> <span class="kc">True</span>
     <span class="n">EXP</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Welcome to level 2"</span><span class="p">)</span>
   <span class="k">elif</span> <span class="n">EXP</span> <span class="o">==</span> <span class="mi">70</span> <span class="ow">and</span> <span class="n">level_3</span> <span class="o">==</span> <span class="kc">False</span><span class="p">:</span>
     <span class="n">Lv</span> <span class="o">=</span> <span class="mi">3</span>
     <span class="n">level_3</span> <span class="o">==</span> <span class="kc">True</span>
     <span class="n">EXP</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"You made it to level 3, good job"</span><span class="p">)</span>
 
 <span class="k">def</span> <span class="nf">Attack</span><span class="p">():</span>
     <span class="k">global</span> <span class="n">punch</span>
@@ -970,6 +962,7 @@ layout: post</p>
     <span class="k">global</span> <span class="n">users_turn</span>
     <span class="k">global</span> <span class="n">health_cap</span>
     <span class="k">global</span> <span class="n">mana_cap</span>
+    <span class="k">global</span> <span class="n">EXP</span>
     <span class="c1">#Kills the player if they are less then 0 health</span>
     <span class="k">if</span> <span class="n">health</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">:</span>
         <span class="n">Dead</span> <span class="o">=</span> <span class="kc">True</span>
@@ -986,6 +979,7 @@ layout: post</p>
     <span class="k">else</span><span class="p">:</span>
       <span class="n">clear_output</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
       <span class="nb">print</span><span class="p">(</span><span class="s2">"You have defeted the harpy!"</span><span class="p">)</span>
+      <span class="n">EXP</span> <span class="o">=</span> <span class="n">EXP</span> <span class="o">+</span> <span class="mi">5</span>
       <span class="n">damage</span> <span class="o">=</span> <span class="mi">1</span>
       <span class="n">harpy1_alive</span> <span class="o">=</span> <span class="kc">False</span>
     <span class="n">health</span> <span class="o">=</span> <span class="n">health</span> <span class="o">-</span> <span class="mi">1</span>
@@ -1023,7 +1017,7 @@ layout: post</p>
     <span class="k">elif</span> <span class="n">rsm</span> <span class="o">==</span> <span class="p">(</span><span class="s2">"move"</span><span class="p">):</span>
       <span class="n">Move</span><span class="p">()</span>
       <span class="n">Map</span><span class="p">()</span>
-    <span class="k">elif</span> <span class="n">rsm</span> <span class="o">==</span> <span class="p">(</span><span class="s2">"location"</span><span class="p">)</span> <span class="ow">or</span> <span class="n">rsm</span> <span class="o">==</span> <span class="p">(</span><span class="s2">"look"</span><span class="p">):</span>
+    <span class="k">elif</span> <span class="n">rsm</span> <span class="o">==</span> <span class="p">(</span><span class="s2">"location"</span><span class="p">)</span> <span class="ow">or</span> <span class="n">rsm</span> <span class="o">==</span> <span class="p">(</span><span class="s2">"look"</span><span class="p">)</span> <span class="ow">or</span> <span class="n">rsm</span> <span class="o">==</span> <span class="p">(</span><span class="s2">"Location"</span><span class="p">):</span>
       <span class="n">Map</span><span class="p">()</span>
       <span class="n">Location</span><span class="p">()</span>
     <span class="k">elif</span> <span class="n">rsm</span> <span class="o">==</span> <span class="p">(</span><span class="s2">"comands"</span><span class="p">)</span> <span class="ow">or</span> <span class="n">rsm</span> <span class="o">==</span> <span class="p">(</span><span class="s2">"actions"</span><span class="p">)</span> <span class="ow">or</span> <span class="n">rsm</span> <span class="o">==</span> <span class="p">(</span><span class="s2">"inputs"</span><span class="p">)</span> <span class="ow">or</span> <span class="n">rsm</span> <span class="o">==</span> <span class="p">(</span><span class="s2">"help"</span><span class="p">)</span> <span class="ow">or</span> <span class="n">rsm</span> <span class="o">==</span> <span class="p">(</span><span class="s2">"Help"</span><span class="p">):</span>
