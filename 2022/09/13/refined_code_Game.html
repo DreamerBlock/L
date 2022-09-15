@@ -10,15 +10,15 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="An easy to use blogging platform with support for Jupyter Notebooks." />
 <meta property="og:description" content="An easy to use blogging platform with support for Jupyter Notebooks." />
-<link rel="canonical" href="https://dreamerblock.github.io/L/2022/09/11/refined_code_Game.html" />
-<meta property="og:url" content="https://dreamerblock.github.io/L/2022/09/11/refined_code_Game.html" />
+<link rel="canonical" href="https://dreamerblock.github.io/L/2022/09/13/refined_code_Game.html" />
+<meta property="og:url" content="https://dreamerblock.github.io/L/2022/09/13/refined_code_Game.html" />
 <meta property="og:site_name" content="fastpages" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2022-09-11T00:00:00-05:00" />
+<meta property="article:published_time" content="2022-09-13T00:00:00-05:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Title" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-09-11T00:00:00-05:00","datePublished":"2022-09-11T00:00:00-05:00","description":"An easy to use blogging platform with support for Jupyter Notebooks.","headline":"Title","mainEntityOfPage":{"@type":"WebPage","@id":"https://dreamerblock.github.io/L/2022/09/11/refined_code_Game.html"},"url":"https://dreamerblock.github.io/L/2022/09/11/refined_code_Game.html"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-09-13T00:00:00-05:00","datePublished":"2022-09-13T00:00:00-05:00","description":"An easy to use blogging platform with support for Jupyter Notebooks.","headline":"Title","mainEntityOfPage":{"@type":"WebPage","@id":"https://dreamerblock.github.io/L/2022/09/13/refined_code_Game.html"},"url":"https://dreamerblock.github.io/L/2022/09/13/refined_code_Game.html"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/L/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://dreamerblock.github.io/L/feed.xml" title="fastpages" /><link rel="shortcut icon" type="image/x-icon" href="/L/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
@@ -78,13 +78,13 @@ window.onload = wrap_img;
 
   <header class="post-header">
     <h1 class="post-title p-name" itemprop="name headline">Title</h1>
-<p class="post-meta post-meta-title"><time class="dt-published" datetime="2022-09-11T00:00:00-05:00" itemprop="datePublished">
-        Sep 11, 2022
+<p class="post-meta post-meta-title"><time class="dt-published" datetime="2022-09-13T00:00:00-05:00" itemprop="datePublished">
+        Sep 13, 2022
       </time>
        • <span class="read-time" title="Estimated read time">
     
     
-      13 min read
+      16 min read
     
 </span></p>
 
@@ -138,6 +138,7 @@ window.onload = wrap_img;
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">random</span><span class="o">,</span> <span class="nn">getpass</span><span class="o">,</span> <span class="nn">sys</span><span class="o">,</span> <span class="nn">time</span>
+<span class="kn">from</span> <span class="nn">turtle</span> <span class="kn">import</span> <span class="n">up</span>
 <span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">clear_output</span>
 <span class="k">def</span> <span class="nf">ask</span><span class="p">():</span>
     <span class="n">msg</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
@@ -833,7 +834,8 @@ window.onload = wrap_img;
       <span class="n">Enemy</span><span class="p">()</span>
     <span class="k">else</span><span class="p">:</span>
       <span class="n">Enemy</span><span class="p">()</span>
-    
+
+
 <span class="k">global</span> <span class="n">ent</span>
 <span class="n">ent</span> <span class="o">=</span> <span class="kc">True</span>
 <span class="k">global</span> <span class="n">crab</span>
@@ -846,6 +848,8 @@ window.onload = wrap_img;
 <span class="n">bear</span> <span class="o">=</span> <span class="kc">True</span>
 <span class="k">global</span> <span class="n">heart_1</span>
 <span class="n">heart_1</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="k">global</span> <span class="n">d</span>
+<span class="n">d</span> <span class="o">=</span> <span class="mi">1</span>
 
 <span class="k">def</span> <span class="nf">Map</span><span class="p">():</span>
   <span class="k">global</span> <span class="n">y</span>
@@ -867,6 +871,7 @@ window.onload = wrap_img;
   <span class="k">global</span> <span class="n">crab</span>
   <span class="k">global</span> <span class="n">hawk</span>
   <span class="k">global</span> <span class="n">bear</span>
+  <span class="k">global</span> <span class="n">d</span>
 
   <span class="c1">#The players cordnets is set based off of x,y and this is the list of all the places on this grid</span>
   <span class="k">if</span> <span class="n">x</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">y</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
@@ -888,9 +893,9 @@ window.onload = wrap_img;
     <span class="nb">print</span><span class="p">(</span><span class="s2">"You are attacked..."</span><span class="p">)</span>
     <span class="n">enemy_alive</span> <span class="o">=</span> <span class="kc">True</span>
     <span class="n">enemy_name</span> <span class="o">=</span> <span class="s2">"Hawk"</span>
-    <span class="n">enemy_health</span> <span class="o">=</span> <span class="mi">6</span>
-    <span class="n">lower_dm</span> <span class="o">=</span> <span class="mi">1</span>
-    <span class="n">uper_dm</span> <span class="o">=</span> <span class="mi">2</span>
+    <span class="n">enemy_health</span> <span class="o">=</span> <span class="mi">6</span> <span class="o">*</span> <span class="n">d</span>
+    <span class="n">lower_dm</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">*</span> <span class="n">d</span>
+    <span class="n">uper_dm</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">d</span>
     <span class="n">enemy_EXP</span> <span class="o">=</span> <span class="mi">5</span>
     <span class="n">Enemy</span><span class="p">()</span>
   <span class="k">elif</span> <span class="n">x</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">y</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">:</span>
@@ -904,9 +909,9 @@ window.onload = wrap_img;
     <span class="nb">print</span><span class="p">(</span><span class="s2">"You are attacked..."</span><span class="p">)</span>
     <span class="n">enemy_alive</span> <span class="o">=</span> <span class="kc">True</span>
     <span class="n">enemy_name</span> <span class="o">=</span> <span class="s2">"Crab"</span>
-    <span class="n">enemy_health</span> <span class="o">=</span> <span class="mi">3</span>
-    <span class="n">lower_dm</span> <span class="o">=</span> <span class="mi">0</span>
-    <span class="n">uper_dm</span> <span class="o">=</span> <span class="mi">4</span>
+    <span class="n">enemy_health</span> <span class="o">=</span> <span class="mi">3</span> <span class="o">*</span> <span class="n">d</span>
+    <span class="n">lower_dm</span> <span class="o">=</span> <span class="mi">0</span> <span class="o">*</span> <span class="n">d</span>
+    <span class="n">uper_dm</span> <span class="o">=</span> <span class="mi">4</span> <span class="o">*</span> <span class="n">d</span>
     <span class="n">enemy_EXP</span> <span class="o">=</span> <span class="mi">5</span>
     <span class="n">Enemy</span><span class="p">()</span>
   <span class="k">elif</span> <span class="n">x</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">y</span> <span class="o">==</span> <span class="o">-</span><span class="mi">2</span><span class="p">:</span>
@@ -921,9 +926,9 @@ window.onload = wrap_img;
     <span class="nb">print</span><span class="p">(</span><span class="s2">"You are attacked..."</span><span class="p">)</span>
     <span class="n">enemy_alive</span> <span class="o">=</span> <span class="kc">True</span>
     <span class="n">enemy_name</span> <span class="o">=</span> <span class="s2">"Ent"</span>
-    <span class="n">enemy_health</span> <span class="o">=</span> <span class="mi">7</span>
-    <span class="n">lower_dm</span> <span class="o">=</span> <span class="mi">0</span>
-    <span class="n">uper_dm</span> <span class="o">=</span> <span class="mi">2</span>
+    <span class="n">enemy_health</span> <span class="o">=</span> <span class="mi">7</span> <span class="o">*</span> <span class="n">d</span>
+    <span class="n">lower_dm</span> <span class="o">=</span> <span class="mi">0</span> <span class="o">*</span> <span class="n">d</span>
+    <span class="n">uper_dm</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">d</span>
     <span class="n">enemy_EXP</span> <span class="o">=</span> <span class="mi">10</span>
     <span class="n">Enemy</span><span class="p">()</span>
   <span class="k">elif</span> <span class="n">x</span> <span class="o">==</span> <span class="mi">1</span> <span class="ow">and</span> <span class="n">y</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">enemy</span> <span class="o">==</span> <span class="kc">False</span><span class="p">:</span>
@@ -934,9 +939,9 @@ window.onload = wrap_img;
     <span class="nb">print</span><span class="p">(</span><span class="s2">"You are attacked..."</span><span class="p">)</span>
     <span class="n">enemy_alive</span> <span class="o">=</span> <span class="kc">True</span>
     <span class="n">enemy_name</span> <span class="o">=</span> <span class="s2">"test"</span>
-    <span class="n">enemy_health</span> <span class="o">=</span> <span class="mi">1</span>
-    <span class="n">lower_dm</span> <span class="o">=</span> <span class="mi">1</span>
-    <span class="n">uper_dm</span> <span class="o">=</span> <span class="mi">2</span>
+    <span class="n">enemy_health</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">*</span> <span class="n">d</span>
+    <span class="n">lower_dm</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">*</span> <span class="n">d</span>
+    <span class="n">uper_dm</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">d</span>
     <span class="n">enemy_EXP</span> <span class="o">=</span> <span class="mi">1000</span>
     <span class="n">Enemy</span><span class="p">()</span>
   <span class="k">elif</span> <span class="n">x</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span> <span class="ow">and</span> <span class="n">y</span> <span class="o">==</span> <span class="mi">3</span> <span class="ow">and</span> <span class="n">enemy</span> <span class="o">==</span> <span class="kc">False</span><span class="p">:</span>
@@ -947,9 +952,9 @@ window.onload = wrap_img;
     <span class="nb">print</span><span class="p">(</span><span class="s2">"You are attacked..."</span><span class="p">)</span>
     <span class="n">enemy_alive</span> <span class="o">=</span> <span class="kc">True</span>
     <span class="n">enemy_name</span> <span class="o">=</span> <span class="s2">"Bear"</span>
-    <span class="n">enemy_health</span> <span class="o">=</span> <span class="mi">12</span>
-    <span class="n">lower_dm</span> <span class="o">=</span> <span class="mi">2</span>
-    <span class="n">uper_dm</span> <span class="o">=</span> <span class="mi">6</span>
+    <span class="n">enemy_health</span> <span class="o">=</span> <span class="mi">12</span> <span class="o">*</span> <span class="n">d</span>
+    <span class="n">lower_dm</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">d</span>
+    <span class="n">uper_dm</span> <span class="o">=</span> <span class="mi">6</span> <span class="o">*</span> <span class="n">d</span>
     <span class="n">enemy_EXP</span> <span class="o">=</span> <span class="mi">25</span>
     <span class="n">Enemy</span><span class="p">()</span>
   <span class="k">elif</span> <span class="n">x</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">y</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span>
@@ -978,11 +983,17 @@ window.onload = wrap_img;
   <span class="k">global</span> <span class="n">enemy_crit</span>
   <span class="k">global</span> <span class="n">print_crit</span>
   <span class="k">global</span> <span class="n">enemy_health</span>
+  <span class="k">global</span> <span class="n">difficulty</span>
+  <span class="k">global</span> <span class="n">lower_dm</span>
+  <span class="k">global</span> <span class="n">uper_dm</span>
   <span class="c1">#Kills the player if they are less then 0 health</span>
   <span class="k">if</span> <span class="n">health</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">:</span>
       <span class="n">Dead</span> <span class="o">=</span> <span class="kc">True</span>
       <span class="n">users_turn</span> <span class="o">=</span> <span class="kc">False</span>
   <span class="n">clear_output</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+  <span class="n">enemy_health</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="n">enemy_health</span><span class="p">)</span>
+  <span class="n">lower_dm</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="n">lower_dm</span><span class="p">)</span>
+  <span class="n">uper_dm</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="n">uper_dm</span><span class="p">)</span>
   <span class="c1">#Asky art print v</span>
   <span class="nb">print</span><span class="p">()</span>
   <span class="n">enemy_health</span> <span class="o">=</span> <span class="n">enemy_health</span> <span class="o">-</span> <span class="n">damage</span>
@@ -1017,20 +1028,132 @@ window.onload = wrap_img;
 
 
 
-        
+<span class="k">global</span> <span class="n">help_count</span>
+<span class="n">help_count</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="k">def</span> <span class="nf">Help</span><span class="p">():</span>
+  <span class="k">global</span> <span class="n">help_count</span>
+  <span class="k">global</span> <span class="n">users_turn</span>
+  <span class="k">if</span> <span class="n">help_count</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">difficulty</span> <span class="o">!=</span> <span class="p">(</span><span class="s2">"Peaceful"</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Hello traveler I see you have asked for my help for the first time"</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Let me explain to you how this will work"</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"When you ask for help I won't just do anything you ask"</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"All I will do for you is guide you on your quest and give you quips from time to time"</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"If you still need help ask again and ill give you some guidence but otherwise just go explore and become stronger"</span><span class="p">)</span>
+
+
+
+  <span class="n">help_count</span> <span class="o">=</span> <span class="n">help_count</span> <span class="o">+</span> <span class="mi">1</span>
+  <span class="n">users_turn</span> <span class="o">=</span> <span class="kc">True</span>
+
+<span class="k">global</span> <span class="n">difficulty</span>
+<span class="n">difficulty</span> <span class="o">=</span> <span class="p">(</span><span class="s2">"nada"</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">Difficulty</span><span class="p">():</span>
+  <span class="k">global</span> <span class="n">difficulty</span>
+  <span class="k">global</span> <span class="n">enemy</span>
+  <span class="k">global</span> <span class="n">d</span>
+  <span class="nb">print</span><span class="p">(</span><span class="s2">"What difficulty would you like to play on?"</span><span class="p">)</span>
+  <span class="nb">print</span><span class="p">(</span><span class="s2">"Peaceful (not recomended) "</span><span class="p">)</span>
+  <span class="nb">print</span><span class="p">(</span><span class="s2">"Easy"</span><span class="p">)</span>
+  <span class="nb">print</span><span class="p">(</span><span class="s2">"Normal"</span><span class="p">)</span>
+  <span class="nb">print</span><span class="p">(</span><span class="s2">"Hard"</span><span class="p">)</span>
+  <span class="nb">print</span><span class="p">(</span><span class="s2">"Demon"</span><span class="p">)</span>
+  <span class="n">rsm</span> <span class="o">=</span> <span class="n">ask</span><span class="p">()</span>
+  <span class="k">if</span> <span class="n">rsm</span> <span class="o">==</span> <span class="p">(</span><span class="s2">"Peaceful"</span><span class="p">)</span> <span class="ow">or</span> <span class="n">rsm</span> <span class="o">==</span> <span class="p">(</span><span class="s2">"peaceful"</span><span class="p">)</span> <span class="ow">or</span> <span class="n">rsm</span> <span class="o">==</span> <span class="p">(</span><span class="s2">"p"</span><span class="p">)</span> <span class="ow">or</span> <span class="n">rsm</span> <span class="o">==</span> <span class="p">(</span><span class="s2">"1"</span><span class="p">):</span>
+    <span class="n">difficulty</span> <span class="o">=</span> <span class="p">(</span><span class="s2">"Peaceful"</span><span class="p">)</span>
+  <span class="k">elif</span> <span class="n">rsm</span> <span class="o">==</span> <span class="p">(</span><span class="s2">"Easy"</span><span class="p">)</span> <span class="ow">or</span> <span class="n">rsm</span> <span class="o">==</span> <span class="p">(</span><span class="s2">"easy"</span><span class="p">)</span> <span class="ow">or</span> <span class="n">rsm</span> <span class="o">==</span> <span class="p">(</span><span class="s2">"e"</span><span class="p">)</span> <span class="ow">or</span> <span class="n">rsm</span> <span class="o">==</span> <span class="p">(</span><span class="s2">"2"</span><span class="p">):</span>
+    <span class="n">difficulty</span> <span class="o">=</span> <span class="p">(</span><span class="s2">"Easy"</span><span class="p">)</span>
+  <span class="k">elif</span> <span class="n">rsm</span> <span class="o">==</span> <span class="p">(</span><span class="s2">"Normal"</span><span class="p">)</span> <span class="ow">or</span> <span class="n">rsm</span> <span class="o">==</span> <span class="p">(</span><span class="s2">"normal"</span><span class="p">)</span> <span class="ow">or</span> <span class="n">rsm</span> <span class="o">==</span> <span class="p">(</span><span class="s2">"n"</span><span class="p">)</span> <span class="ow">or</span> <span class="n">rsm</span> <span class="o">==</span> <span class="p">(</span><span class="s2">"3"</span><span class="p">):</span>
+    <span class="n">difficulty</span> <span class="o">=</span> <span class="p">(</span><span class="s2">"Normal"</span><span class="p">)</span>
+  <span class="k">elif</span> <span class="n">rsm</span> <span class="o">==</span> <span class="p">(</span><span class="s2">"Hard"</span><span class="p">)</span> <span class="ow">or</span> <span class="n">rsm</span> <span class="o">==</span> <span class="p">(</span><span class="s2">"hard"</span><span class="p">)</span> <span class="ow">or</span> <span class="n">rsm</span> <span class="o">==</span> <span class="p">(</span><span class="s2">"h"</span><span class="p">)</span> <span class="ow">or</span> <span class="n">rsm</span> <span class="o">==</span> <span class="p">(</span><span class="s2">"4"</span><span class="p">):</span>
+    <span class="n">difficulty</span> <span class="o">=</span> <span class="p">(</span><span class="s2">"Hard"</span><span class="p">)</span>
+  <span class="k">elif</span> <span class="n">rsm</span> <span class="o">==</span> <span class="p">(</span><span class="s2">"Demon"</span><span class="p">)</span> <span class="ow">or</span> <span class="n">rsm</span> <span class="o">==</span> <span class="p">(</span><span class="s2">"demon"</span><span class="p">)</span> <span class="ow">or</span> <span class="n">rsm</span> <span class="o">==</span> <span class="p">(</span><span class="s2">"d"</span><span class="p">)</span> <span class="ow">or</span> <span class="n">rsm</span> <span class="o">==</span> <span class="p">(</span><span class="s2">"5"</span><span class="p">):</span>
+    <span class="n">difficulty</span> <span class="o">=</span> <span class="p">(</span><span class="s2">"Demon"</span><span class="p">)</span>
+  <span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Thats not a choice"</span><span class="p">)</span>
+    <span class="n">Difficulty</span><span class="p">()</span>
+  <span class="k">if</span> <span class="n">difficulty</span> <span class="o">==</span> <span class="p">(</span><span class="s2">"Peaceful"</span><span class="p">):</span>
+    <span class="n">d</span> <span class="o">=</span> <span class="mi">0</span>
+  <span class="k">if</span> <span class="n">difficulty</span> <span class="o">==</span> <span class="p">(</span><span class="s2">"Easy"</span><span class="p">):</span>
+    <span class="n">d</span> <span class="o">=</span> <span class="mf">0.5</span>
+  <span class="k">if</span> <span class="n">difficulty</span> <span class="o">==</span> <span class="p">(</span><span class="s2">"Hard"</span><span class="p">):</span>
+    <span class="n">d</span> <span class="o">=</span> <span class="mi">2</span>
+  <span class="k">if</span> <span class="n">difficulty</span> <span class="o">==</span> <span class="p">(</span><span class="s2">"Demon"</span><span class="p">):</span>
+    <span class="n">d</span> <span class="o">=</span> <span class="mi">10</span>
+
 <span class="k">def</span> <span class="nf">Intro_Story</span><span class="p">():</span>
-  <span class="nb">print</span><span class="p">(</span><span class="s2">"Hello there travel how are you?"</span><span class="p">)</span>
-  <span class="nb">print</span><span class="p">(</span><span class="s2">"Well it doesn't really mater how you are your jurny will start anyway"</span><span class="p">)</span>
-  <span class="nb">print</span><span class="p">(</span><span class="s2">"I'll start you down in a village, hope that sounds good to you since you don't have a choice"</span><span class="p">)</span>
-  <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="o">.</span><span class="mi">5</span><span class="p">)</span>
-  <span class="nb">print</span><span class="p">(</span><span class="s2">"Also try not to die or I might be seing you again soon"</span><span class="p">)</span>
+  <span class="k">if</span> <span class="n">difficulty</span> <span class="o">==</span> <span class="p">(</span><span class="s2">"Peaceful"</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Baby"</span><span class="p">)</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="o">.</span><span class="mi">5</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Quit the game and pick something different"</span><span class="p">)</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="o">.</span><span class="mi">7</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"The whole game is about the combat"</span><span class="p">)</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="o">.</span><span class="mi">8</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"If your on Peaceful you wont be able to level up"</span><span class="p">)</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="o">.</span><span class="mi">8</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Would you like to reset your choice?"</span><span class="p">)</span>
+    <span class="n">rsm</span> <span class="o">=</span> <span class="n">ask</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">rsm</span> <span class="o">==</span> <span class="p">(</span><span class="s2">"Yes"</span><span class="p">)</span> <span class="ow">or</span> <span class="n">rsm</span> <span class="o">==</span> <span class="p">(</span><span class="s2">"y"</span><span class="p">)</span> <span class="ow">or</span> <span class="n">rsm</span> <span class="o">==</span> <span class="p">(</span><span class="s2">"yes"</span><span class="p">)</span> <span class="ow">or</span> <span class="n">rsm</span> <span class="o">==</span> <span class="p">(</span><span class="s2">"sure"</span><span class="p">):</span>
+      <span class="n">Difficulty</span><span class="p">()</span>
+    <span class="k">else</span><span class="p">:</span>
+      <span class="nb">print</span><span class="p">(</span><span class="s2">"Well you made your choice have fun not playing the game"</span><span class="p">)</span>
+      <span class="k">global</span> <span class="n">ent</span>
+      <span class="n">ent</span> <span class="o">=</span> <span class="kc">False</span>
+      <span class="k">global</span> <span class="n">crab</span>
+      <span class="n">crab</span> <span class="o">=</span> <span class="kc">False</span>
+      <span class="k">global</span> <span class="n">hawk</span>
+      <span class="n">hawk</span> <span class="o">=</span> <span class="kc">False</span>
+      <span class="k">global</span> <span class="n">test</span>
+      <span class="n">test</span> <span class="o">=</span> <span class="kc">False</span>
+      <span class="k">global</span> <span class="n">bear</span>
+      <span class="n">bear</span> <span class="o">=</span> <span class="kc">False</span>
+      <span class="k">global</span> <span class="n">heart_1</span>
+      <span class="n">heart_1</span> <span class="o">=</span> <span class="kc">False</span>
+      <span class="n">enemy</span> <span class="o">=</span> <span class="kc">False</span>
+      <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+
+  <span class="k">if</span> <span class="n">difficulty</span> <span class="o">==</span> <span class="p">(</span><span class="s2">"Easy"</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Not really a chalenge seeker I see"</span><span class="p">)</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="o">.</span><span class="mi">5</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Just don't try to brag when you beat the game"</span><span class="p">)</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="o">.</span><span class="mi">5</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Also if you lose ill totaly make fun of you"</span><span class="p">)</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="o">.</span><span class="mi">5</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Off you go traveler"</span><span class="p">)</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="o">.</span><span class="mi">5</span><span class="p">)</span>
+
+  <span class="k">if</span> <span class="n">difficulty</span> <span class="o">==</span> <span class="p">(</span><span class="s2">"Normal"</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Hello there travel how are you?"</span><span class="p">)</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="o">.</span><span class="mi">5</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Well it doesn't really mater how you are your jurny will start anyway"</span><span class="p">)</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="o">.</span><span class="mi">5</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"I'll start you down in a village, hope that sounds good to you since you don't have a choice"</span><span class="p">)</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="o">.</span><span class="mi">2</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"If you need help you can always ask me"</span><span class="p">)</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Also try not to die or I might be seing you again soon"</span><span class="p">)</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="o">.</span><span class="mi">5</span><span class="p">)</span>
+  
+  <span class="k">if</span> <span class="n">difficulty</span> <span class="o">==</span> <span class="p">(</span><span class="s2">"Hard"</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Looks like you think this is going to be easy"</span><span class="p">)</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="o">.</span><span class="mi">5</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Or this isnt your first time seeing me"</span><span class="p">)</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="o">.</span><span class="mi">5</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Ether way good luck on doing this"</span><span class="p">)</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="o">.</span><span class="mi">5</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"And see you again soon traveler"</span><span class="p">)</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="o">.</span><span class="mi">5</span><span class="p">)</span>
+  
+  <span class="k">if</span> <span class="n">difficulty</span> <span class="o">==</span> <span class="p">(</span><span class="s2">"Demon"</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Have fun dying in one hit this world is way too hard for you, not even I could survie here"</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Just don't be asking for help here since the is nothing I could do"</span><span class="p">)</span>
 
 
 <span class="k">while</span><span class="p">(</span><span class="n">Dead</span><span class="p">):</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">"You died better luck next time"</span><span class="p">)</span>
     <span class="n">users_turn</span> <span class="o">=</span> <span class="kc">False</span>
     <span class="n">Dead</span> <span class="o">=</span> <span class="kc">False</span>
-
+<span class="n">Difficulty</span><span class="p">()</span>
 <span class="n">Intro_Story</span><span class="p">()</span>
 <span class="n">Location</span><span class="p">()</span>
 <span class="k">while</span><span class="p">(</span><span class="n">users_turn</span><span class="p">):</span>
@@ -1048,10 +1171,12 @@ window.onload = wrap_img;
     <span class="k">elif</span> <span class="n">rsm</span> <span class="o">==</span> <span class="p">(</span><span class="s2">"move"</span><span class="p">):</span>
       <span class="n">Move</span><span class="p">()</span>
       <span class="n">Map</span><span class="p">()</span>
+    <span class="k">elif</span> <span class="n">rsm</span> <span class="o">==</span> <span class="p">(</span><span class="s2">"help"</span><span class="p">)</span> <span class="ow">or</span> <span class="n">rsm</span> <span class="o">==</span> <span class="p">(</span><span class="s2">"Help"</span><span class="p">):</span>
+      <span class="n">Help</span><span class="p">()</span>
     <span class="k">elif</span> <span class="n">rsm</span> <span class="o">==</span> <span class="p">(</span><span class="s2">"location"</span><span class="p">)</span> <span class="ow">or</span> <span class="n">rsm</span> <span class="o">==</span> <span class="p">(</span><span class="s2">"look"</span><span class="p">)</span> <span class="ow">or</span> <span class="n">rsm</span> <span class="o">==</span> <span class="p">(</span><span class="s2">"Location"</span><span class="p">):</span>
       <span class="n">Map</span><span class="p">()</span>
       <span class="n">Location</span><span class="p">()</span>
-    <span class="k">elif</span> <span class="n">rsm</span> <span class="o">==</span> <span class="p">(</span><span class="s2">"comands"</span><span class="p">)</span> <span class="ow">or</span> <span class="n">rsm</span> <span class="o">==</span> <span class="p">(</span><span class="s2">"actions"</span><span class="p">)</span> <span class="ow">or</span> <span class="n">rsm</span> <span class="o">==</span> <span class="p">(</span><span class="s2">"inputs"</span><span class="p">)</span> <span class="ow">or</span> <span class="n">rsm</span> <span class="o">==</span> <span class="p">(</span><span class="s2">"help"</span><span class="p">)</span> <span class="ow">or</span> <span class="n">rsm</span> <span class="o">==</span> <span class="p">(</span><span class="s2">"Help"</span><span class="p">):</span>
+    <span class="k">elif</span> <span class="n">rsm</span> <span class="o">==</span> <span class="p">(</span><span class="s2">"commands"</span><span class="p">)</span> <span class="ow">or</span> <span class="n">rsm</span> <span class="o">==</span> <span class="p">(</span><span class="s2">"actions"</span><span class="p">)</span> <span class="ow">or</span> <span class="n">rsm</span> <span class="o">==</span> <span class="p">(</span><span class="s2">"inputs"</span><span class="p">)</span> <span class="ow">or</span> <span class="n">rsm</span> <span class="o">==</span> <span class="p">(</span><span class="s2">"command"</span><span class="p">):</span>
       <span class="n">Comands</span><span class="p">()</span>
     <span class="k">elif</span> <span class="n">rsm</span> <span class="o">==</span> <span class="p">(</span><span class="s2">"north"</span><span class="p">)</span> <span class="ow">or</span> <span class="n">rsm</span> <span class="o">==</span> <span class="p">(</span><span class="s2">"North"</span><span class="p">)</span> <span class="ow">or</span> <span class="n">rsm</span> <span class="o">==</span> <span class="p">(</span><span class="s2">"up"</span><span class="p">)</span> <span class="ow">or</span> <span class="n">rsm</span> <span class="o">==</span> <span class="p">(</span><span class="s2">"Up"</span><span class="p">):</span>
       <span class="n">users_turn</span> <span class="o">=</span> <span class="kc">True</span>
@@ -1098,7 +1223,7 @@ window.onload = wrap_img;
 
 
   </div>
-<a class="u-url" href="/L/2022/09/11/refined_code_Game.html" hidden></a>
+<a class="u-url" href="/L/2022/09/13/refined_code_Game.html" hidden></a>
 </article>
 
       </div>
