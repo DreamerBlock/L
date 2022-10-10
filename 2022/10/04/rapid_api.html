@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Title | fastpages</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Title" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="An easy to use blogging platform with support for Jupyter Notebooks." />
+<meta property="og:description" content="An easy to use blogging platform with support for Jupyter Notebooks." />
+<link rel="canonical" href="https://dreamerblock.github.io/L/2022/10/04/rapid_api.html" />
+<meta property="og:url" content="https://dreamerblock.github.io/L/2022/10/04/rapid_api.html" />
+<meta property="og:site_name" content="fastpages" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-10-04T00:00:00-05:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Title" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-10-04T00:00:00-05:00","datePublished":"2022-10-04T00:00:00-05:00","description":"An easy to use blogging platform with support for Jupyter Notebooks.","headline":"Title","mainEntityOfPage":{"@type":"WebPage","@id":"https://dreamerblock.github.io/L/2022/10/04/rapid_api.html"},"url":"https://dreamerblock.github.io/L/2022/10/04/rapid_api.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/L/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://dreamerblock.github.io/L/feed.xml" title="fastpages" /><link rel="shortcut icon" type="image/x-icon" href="/L/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/L/">fastpages</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/L/about/">About Me</a><a class="page-link" href="/L/search/">Search</a><a class="page-link" href="/L/categories/">Tags</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Title</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2022-10-04T00:00:00-05:00" itemprop="datePublished">
+        Oct 4, 2022
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      5 min read
+    
+</span></p>
+
+    
+
+    
+      
+        <div class="pb-5 d-flex flex-justify-center">
+          <div class="px-2">
+
+    <a href="https://github.com/DreamerBlock/L/tree/master/_notebooks/2022-10-04-rapid_api.ipynb" role="button" target="_blank">
+<img class="notebook-badge-image" src="/L/assets/badges/github.svg" alt="View On GitHub">
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://mybinder.org/v2/gh/DreamerBlock/L/master?filepath=_notebooks%2F2022-10-04-rapid_api.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/L/assets/badges/binder.svg" alt="Open In Binder"/>
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://colab.research.google.com/github/DreamerBlock/L/blob/master/_notebooks/2022-10-04-rapid_api.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/L/assets/badges/colab.svg" alt="Open In Colab"/>
+    </a>
+</div>
+          <div class="px-2">
+  <a href="https://deepnote.com/launch?url=https%3A%2F%2Fgithub.com%2FDreamerBlock%2FL%2Fblob%2Fmaster%2F_notebooks%2F2022-10-04-rapid_api.ipynb" target="_blank">
+      <img class="notebook-badge-image" src="/L/assets/badges/deepnote.svg" alt="Launch in Deepnote"/>
+  </a>
+</div>
+
+        </div>
+      </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <!--
+#################################################
+### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
+#################################################
+# file to edit: _notebooks/2022-10-04-rapid_api.ipynb
+-->
+
+<div class="container" id="notebook-container">
+        
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">operator</span> <span class="kn">import</span> <span class="n">length_hint</span>
+<span class="kn">import</span> <span class="nn">requests</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;What would you like to search for?&quot;</span><span class="p">)</span>
+<span class="n">search</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;What would you like to search for?&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;What page would you like to look on?&quot;</span><span class="p">)</span>
+<span class="n">num</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;What page would you like to look on?&quot;</span><span class="p">)</span>
+
+<span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://steam2.p.rapidapi.com/search/&quot;</span> <span class="o">+</span> <span class="n">search</span> <span class="o">+</span> <span class="s2">&quot;/page/&quot;</span> <span class="o">+</span> <span class="n">num</span>
+
+<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span>
+	<span class="s2">&quot;X-RapidAPI-Key&quot;</span><span class="p">:</span> <span class="s2">&quot;88aa5b8dacmsh350e7e49edf633bp1971d7jsn1986942bb1b2&quot;</span><span class="p">,</span>
+	<span class="s2">&quot;X-RapidAPI-Host&quot;</span><span class="p">:</span> <span class="s2">&quot;steam2.p.rapidapi.com&quot;</span>
+<span class="p">}</span>
+
+<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="s2">&quot;GET&quot;</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
+
+<span class="n">steam_data</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+
+<span class="k">def</span> <span class="nf">print_data</span><span class="p">(</span><span class="n">d_rec</span><span class="p">):</span>
+	<span class="k">try</span><span class="p">:</span>
+		<span class="nb">print</span><span class="p">(</span><span class="n">d_rec</span><span class="p">[</span><span class="s2">&quot;imgUrl&quot;</span><span class="p">])</span>
+	<span class="k">except</span><span class="p">:</span>
+		<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Error&quot;</span><span class="p">)</span>
+	<span class="k">try</span><span class="p">:</span>
+		<span class="nb">print</span><span class="p">(</span><span class="n">d_rec</span><span class="p">[</span><span class="s2">&quot;appId&quot;</span><span class="p">],</span> <span class="n">d_rec</span><span class="p">[</span><span class="s2">&quot;title&quot;</span><span class="p">],</span> <span class="n">d_rec</span><span class="p">[</span><span class="s2">&quot;price&quot;</span><span class="p">],</span> <span class="n">d_rec</span><span class="p">[</span><span class="s2">&quot;released&quot;</span><span class="p">],</span> <span class="n">d_rec</span><span class="p">[</span><span class="s2">&quot;reviewSummary&quot;</span><span class="p">])</span>
+	<span class="k">except</span><span class="p">:</span>
+		<span class="k">try</span><span class="p">:</span>
+			<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;(No appId)&quot;</span><span class="p">,</span> <span class="n">d_rec</span><span class="p">[</span><span class="s2">&quot;title&quot;</span><span class="p">],</span> <span class="n">d_rec</span><span class="p">[</span><span class="s2">&quot;price&quot;</span><span class="p">],</span> <span class="n">d_rec</span><span class="p">[</span><span class="s2">&quot;released&quot;</span><span class="p">],</span> <span class="n">d_rec</span><span class="p">[</span><span class="s2">&quot;reviewSummary&quot;</span><span class="p">])</span>
+		<span class="k">except</span><span class="p">:</span>
+			<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Error&quot;</span><span class="p">)</span>
+<span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">def</span> <span class="nf">recursive_loop</span><span class="p">():</span>
+	<span class="k">global</span> <span class="n">i</span>
+	<span class="k">if</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">steam_data</span><span class="p">):</span>
+		<span class="n">record</span> <span class="o">=</span> <span class="n">steam_data</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+		<span class="n">print_data</span><span class="p">(</span><span class="n">record</span><span class="p">)</span>
+		<span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+		<span class="n">recursive_loop</span><span class="p">()</span>
+
+<span class="n">recursive_loop</span><span class="p">()</span>
+<span class="c1">#print(response.text)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>What would you like to search for?
+What page would you like to look on?
+https://cdn.akamai.steamstatic.com/steam/apps/105600/capsule_sm_120.jpg?t=1664397885
+105600 Terraria                         9,99€                     16 May, 2011 Overwhelmingly Positive&lt;br&gt;97% of the 810,532 user reviews for this game are positive.
+https://cdn.akamai.steamstatic.com/steam/apps/409210/capsule_sm_120.jpg?t=1602690120
+409210 Terraria: Official Soundtrack                         3,99€                     13 Oct, 2015 Very Positive&lt;br&gt;95% of the 468 user reviews for this game are positive.
+https://cdn.akamai.steamstatic.com/steam/apps/1323320/capsule_sm_120.jpg?t=1594220078
+1323320 Terraria: Otherworld Official Soundtrack                         3,99€                     25 Jun, 2020 Very Positive&lt;br&gt;96% of the 153 user reviews for this game are positive.
+https://cdn.akamai.steamstatic.com/steam/apps/322330/capsule_sm_120.jpg?t=1659633087
+322330 Don&#39;t Starve Together                         14,99€                     21 Apr, 2016 Overwhelmingly Positive&lt;br&gt;96% of the 232,472 user reviews for this game are positive.
+https://cdn.akamai.steamstatic.com/steam/apps/304050/capsule_sm_120.jpg?t=1657799658
+304050 Trove                                              9 Jul, 2015 Very Positive&lt;br&gt;80% of the 88,003 user reviews for this game are positive.
+https://cdn.akamai.steamstatic.com/steam/apps/219740/capsule_sm_120.jpg?t=1647292111
+219740 Don&#39;t Starve                         8,19€                      Overwhelmingly Positive&lt;br&gt;96% of the 81,932 user reviews for this game are positive.
+https://cdn.akamai.steamstatic.com/steam/apps/751780/capsule_sm_120.jpg?t=1659134729
+751780 Forager                         19,99€                     18 Apr, 2019 Very Positive&lt;br&gt;91% of the 25,726 user reviews for this game are positive.
+https://cdn.akamai.steamstatic.com/steam/apps/1072420/capsule_sm_120.jpg?t=1661972322
+1072420 DRAGON QUEST BUILDERS™ 2                         49,99€                     10 Dec, 2019 Very Positive&lt;br&gt;92% of the 4,669 user reviews for this game are positive.
+https://cdn.akamai.steamstatic.com/steam/apps/248390/capsule_sm_120.jpg?t=1637833319
+248390 Craft The World                         18,99€                     24 Nov, 2014 Very Positive&lt;br&gt;88% of the 11,574 user reviews for this game are positive.
+https://cdn.akamai.steamstatic.com/steam/apps/712640/capsule_sm_120.jpg?t=1598399015
+712640 Don&#39;t Starve: Hamlet                         5,69€                     8 Nov, 2018 Very Positive&lt;br&gt;86% of the 1,353 user reviews for this game are positive.
+https://cdn.akamai.steamstatic.com/steam/apps/1710240/capsule_sm_120.jpg?t=1631204890
+1710240 Don&#39;t Starve Together: Starter Pack 2021                         6,59€                     9 Sep, 2021 Very Positive&lt;br&gt;86% of the 65 user reviews for this game are positive.
+https://cdn.akamai.steamstatic.com/steam/apps/1281930/capsule_sm_120.jpg?t=1654800634
+1281930 tModLoader                         Free                     16 May, 2020 Overwhelmingly Positive&lt;br&gt;97% of the 148,124 user reviews for this game are positive.
+https://cdn.akamai.steamstatic.com/steam/apps/393010/capsule_sm_120.jpg?t=1596173066
+393010 Don&#39;t Starve: Shipwrecked                         4,99€                     1 Dec, 2015 Overwhelmingly Positive&lt;br&gt;95% of the 3,009 user reviews for this game are positive.
+https://cdn.akamai.steamstatic.com/steam/apps/282470/capsule_sm_120.jpg?t=1585716887
+282470 Don&#39;t Starve: Reign of Giants                         4,99€                     2 Apr, 2014 Overwhelmingly Positive&lt;br&gt;96% of the 1,488 user reviews for this game are positive.
+https://cdn.akamai.steamstatic.com/steam/bundles/21303/dngzv4s9lxvyibvx/capsule_sm_120.jpg?t=1623045187
+(No appId) Ultimate Craft Bundle                         39,30€                      Very Positive&lt;br&gt;87% of the 12,254 user reviews for games in this bundle are positive.
+https://cdn.akamai.steamstatic.com/steam/apps/280790/capsule_sm_120.jpg?t=1637786796
+280790 Creativerse                         Free To Play                     8 May, 2017 Very Positive&lt;br&gt;80% of the 29,693 user reviews for this game are positive.
+https://cdn.akamai.steamstatic.com/steam/apps/265000/capsule_sm_120.jpg?t=1560428692
+265000 FORCED SHOWDOWN                         19,99€                     29 Mar, 2016 Very Positive&lt;br&gt;83% of the 472 user reviews for this game are positive.
+https://cdn.akamai.steamstatic.com/steam/apps/391730/capsule_sm_120.jpg?t=1659108826
+391730 Crashlands                         14,99€                     21 Jan, 2016 Very Positive&lt;br&gt;89% of the 2,938 user reviews for this game are positive.
+https://cdn.akamai.steamstatic.com/steam/apps/636040/capsule_sm_120.jpg?t=1607517047
+636040 Pixel Worlds: MMO Sandbox                         Free To Play                     8 Jun, 2017 Mostly Positive&lt;br&gt;74% of the 5,140 user reviews for this game are positive.
+https://cdn.akamai.steamstatic.com/steam/apps/705120/capsule_sm_120.jpg?t=1641371368
+705120 Death Coming/死神来了                         6,99€                     6 Nov, 2017 Very Positive&lt;br&gt;90% of the 2,937 user reviews for this game are positive.
+https://cdn.akamai.steamstatic.com/steam/apps/385380/capsule_sm_120.jpg?t=1656016201
+385380 Planet Centauri                         13,99€                     3 Jun, 2016 Very Positive&lt;br&gt;80% of the 1,585 user reviews for this game are positive.
+https://cdn.akamai.steamstatic.com/steam/apps/315460/capsule_sm_120.jpg?t=1626875302
+315460 Dig or Die                         11,99€                     10 Jul, 2018 Very Positive&lt;br&gt;90% of the 3,521 user reviews for this game are positive.
+https://cdn.akamai.steamstatic.com/steam/apps/1509120/capsule_sm_120.jpg?t=1612934974
+1509120 Craft The World - Heart of Evil                         5,69€                     27 Dec, 2020 Mixed&lt;br&gt;40% of the 52 user reviews for this game are positive.
+https://cdn.akamai.steamstatic.com/steam/apps/1105370/capsule_sm_120.jpg?t=1604663915
+1105370 Craft The World - Bosses &amp; Monsters                         6,59€                     25 Jun, 2019 Mixed&lt;br&gt;57% of the 118 user reviews for this game are positive.
+https://cdn.akamai.steamstatic.com/steam/apps/852500/capsule_sm_120.jpg?t=1525129173
+852500 WorldQuest                         Free                     29 Apr, 2018 Mixed&lt;br&gt;68% of the 83 user reviews for this game are positive.
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Requests is a HTTP library for the Python programming language. </span>
+<span class="sd">The goal of the project is to make HTTP requests simpler and more human-friendly. </span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="kn">import</span> <span class="nn">requests</span>
+
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">RapidAPI is the world&#39;s largest API Marketplace. </span>
+<span class="sd">Developers use Rapid API to discover and connect to thousands of APIs. </span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://corona-virus-world-and-india-data.p.rapidapi.com/api&quot;</span>
+<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;x-rapidapi-key&#39;</span><span class="p">:</span> <span class="s2">&quot;dec069b877msh0d9d0827664078cp1a18fajsn2afac35ae063&quot;</span><span class="p">,</span>
+    <span class="s1">&#39;x-rapidapi-host&#39;</span><span class="p">:</span> <span class="s2">&quot;corona-virus-world-and-india-data.p.rapidapi.com&quot;</span>
+<span class="p">}</span>
+
+<span class="c1"># Request Covid Data</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="s2">&quot;GET&quot;</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
+<span class="c1"># print(response.text)  # uncomment this line to see raw data</span>
+
+<span class="c1"># This code looks for &quot;world data&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;World Totals&quot;</span><span class="p">)</span>
+<span class="n">world</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;world_total&#39;</span><span class="p">)</span>  <span class="c1"># turn response to json() so we can extract &quot;world_total&quot;</span>
+<span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">world</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>  <span class="c1"># this finds key, value pairs in country</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">()</span>
+
+<span class="c1"># This code looks for USA in &quot;countries_stats&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Country Totals&quot;</span><span class="p">)</span>
+<span class="n">countries</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;countries_stat&#39;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">country</span> <span class="ow">in</span> <span class="n">countries</span><span class="p">:</span>  <span class="c1"># countries is a list</span>
+    <span class="k">if</span> <span class="n">country</span><span class="p">[</span><span class="s2">&quot;country_name&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;USA&quot;</span><span class="p">:</span>  <span class="c1"># this filters for USA</span>
+        <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">country</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>  <span class="c1"># this finds key, value pairs in country</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>World Totals
+total_cases 509,268,964
+new_cases 204,268
+total_deaths 6,242,509
+new_deaths 630
+total_recovered 461,827,849
+active_cases 41,198,606
+serious_critical 42,510
+total_cases_per_1m_population 65,334
+deaths_per_1m_population 800.9
+statistic_taken_at 2022-04-24 11:18:01
+
+Country Totals
+country_name USA
+cases 82,649,779
+deaths 1,018,316
+region 
+total_recovered 80,434,925
+new_deaths 0
+new_cases 0
+serious_critical 1,465
+active_cases 1,196,538
+total_cases_per_1m_population 247,080
+deaths_per_1m_population 3,044
+total_tests 1,000,275,726
+tests_per_1m_population 2,990,303
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Begin Rapid API Code</span>
+<span class="kn">import</span> <span class="nn">requests</span>
+
+<span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://coinranking1.p.rapidapi.com/coins&quot;</span>
+<span class="n">querystring</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;referenceCurrencyUuid&quot;</span><span class="p">:</span><span class="s2">&quot;yhjMzLPhuIDl&quot;</span><span class="p">,</span><span class="s2">&quot;timePeriod&quot;</span><span class="p">:</span><span class="s2">&quot;24h&quot;</span><span class="p">,</span><span class="s2">&quot;tiers[0]&quot;</span><span class="p">:</span><span class="s2">&quot;1&quot;</span><span class="p">,</span><span class="s2">&quot;orderBy&quot;</span><span class="p">:</span><span class="s2">&quot;marketCap&quot;</span><span class="p">,</span><span class="s2">&quot;orderDirection&quot;</span><span class="p">:</span><span class="s2">&quot;desc&quot;</span><span class="p">,</span><span class="s2">&quot;limit&quot;</span><span class="p">:</span><span class="s2">&quot;50&quot;</span><span class="p">,</span><span class="s2">&quot;offset&quot;</span><span class="p">:</span><span class="s2">&quot;0&quot;</span><span class="p">}</span>
+<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span>
+	<span class="s2">&quot;X-RapidAPI-Key&quot;</span><span class="p">:</span> <span class="s2">&quot;jcmbea0fa2ff5msh7f14bf69be38ca6p175482jsn6c4988114560&quot;</span><span class="p">,</span>  <span class="c1"># place your key here</span>
+	<span class="s2">&quot;X-RapidAPI-Host&quot;</span><span class="p">:</span> <span class="s2">&quot;coinranking1.p.rapidapi.com&quot;</span>
+<span class="p">}</span>
+
+<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="s2">&quot;GET&quot;</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="n">querystring</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+<span class="c1"># End Rapid API Code</span>
+<span class="n">json</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>  <span class="c1"># convert response to python json object</span>
+
+<span class="c1"># Observe data from an API.  This is how data transports over the internet in a &quot;JSON&quot; text form</span>
+<span class="c1"># - The JSON &quot;text&quot; is formed in dictionary {} and list [] divisions</span>
+<span class="c1"># - To read the result, Data Scientist of  Developer converts JSON into human readable form</span>
+<span class="c1"># - Review the first line, look for the keys --  &quot;status&quot; and &quot;data&quot;</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>{&#34;message&#34;:&#34;You are not subscribed to this API.&#34;}
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+</div>
+
+
+
+  </div><a class="u-url" href="/L/2022/10/04/rapid_api.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/L/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/L/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/L/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>An easy to use blogging platform with support for Jupyter Notebooks.</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/fastai" target="_blank" title="fastai"><svg class="svg-icon grey"><use xlink:href="/L/assets/minima-social-icons.svg#github"></use></svg></a></li><li><a rel="me" href="https://twitter.com/fastdotai" target="_blank" title="fastdotai"><svg class="svg-icon grey"><use xlink:href="/L/assets/minima-social-icons.svg#twitter"></use></svg></a></li></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
