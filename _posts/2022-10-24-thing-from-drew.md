@@ -5,7 +5,6 @@ description: VOTE NOW!
 permalink: /data/alarms
 categories: [C4.7, javascript]
 ---
-{% include nav_data.html %}
 Please listen to the alarm tones found [here](https://on.soundcloud.com/d43FR) to choose which alarm to vote for. You may like or dislike any alarm as many times as you like. The alarm with the most likes (with dislikes taken into account) will be implemented as the default.
 <!-- HTML table fragment for page -->
 <table>
