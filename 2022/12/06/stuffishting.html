@@ -175,6 +175,35 @@ window.onload = wrap_img;
             <span class="p">[</span><span class="s2">&quot;A&quot;</span><span class="p">,</span> <span class="s2">&quot;S&quot;</span><span class="p">,</span> <span class="s2">&quot;D&quot;</span><span class="p">,</span> <span class="s2">&quot;F&quot;</span><span class="p">,</span> <span class="s2">&quot;G&quot;</span><span class="p">,</span> <span class="s2">&quot;H&quot;</span><span class="p">,</span> <span class="s2">&quot;J&quot;</span><span class="p">,</span> <span class="s2">&quot;K&quot;</span><span class="p">,</span> <span class="s2">&quot;L&quot;</span><span class="p">,</span> <span class="s2">&quot;;&quot;</span><span class="p">,</span> <span class="s2">&quot;&#39;&quot;</span><span class="p">],</span>
             <span class="p">[</span><span class="s2">&quot;Z&quot;</span><span class="p">,</span> <span class="s2">&quot;X&quot;</span><span class="p">,</span> <span class="s2">&quot;C&quot;</span><span class="p">,</span> <span class="s2">&quot;V&quot;</span><span class="p">,</span> <span class="s2">&quot;B&quot;</span><span class="p">,</span> <span class="s2">&quot;N&quot;</span><span class="p">,</span> <span class="s2">&quot;M&quot;</span><span class="p">,</span> <span class="s2">&quot;,&quot;</span><span class="p">,</span> <span class="s2">&quot;.&quot;</span><span class="p">,</span> <span class="s2">&quot;/&quot;</span><span class="p">]]</span>
 
+<span class="n">res</span> <span class="o">=</span> <span class="p">[[</span><span class="nb">str</span><span class="p">(</span><span class="n">ele</span><span class="p">)</span> <span class="k">for</span> <span class="n">ele</span> <span class="ow">in</span> <span class="n">sub</span><span class="p">]</span> <span class="k">for</span> <span class="n">sub</span> <span class="ow">in</span> <span class="n">keyboard</span><span class="p">]</span>
+<span class="n">res</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">res</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">date</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">res</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">i</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="n">k</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="n">date</span> <span class="o">=</span> <span class="s2">&quot;2005/09/13&quot;</span>
+<span class="n">keyboard</span> <span class="o">=</span> <span class="p">[[</span><span class="s2">&quot;`&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;-&quot;</span><span class="p">,</span> <span class="s2">&quot;=&quot;</span><span class="p">],</span>
+            <span class="p">[</span><span class="s2">&quot;Q&quot;</span><span class="p">,</span> <span class="s2">&quot;W&quot;</span><span class="p">,</span> <span class="s2">&quot;E&quot;</span><span class="p">,</span> <span class="s2">&quot;R&quot;</span><span class="p">,</span> <span class="s2">&quot;T&quot;</span><span class="p">,</span> <span class="s2">&quot;Y&quot;</span><span class="p">,</span> <span class="s2">&quot;U&quot;</span><span class="p">,</span> <span class="s2">&quot;I&quot;</span><span class="p">,</span> <span class="s2">&quot;O&quot;</span><span class="p">,</span> <span class="s2">&quot;P&quot;</span><span class="p">,</span> <span class="s2">&quot;[&quot;</span><span class="p">,</span> <span class="s2">&quot;]&quot;</span><span class="p">],</span>
+            <span class="p">[</span><span class="s2">&quot;A&quot;</span><span class="p">,</span> <span class="s2">&quot;S&quot;</span><span class="p">,</span> <span class="s2">&quot;D&quot;</span><span class="p">,</span> <span class="s2">&quot;F&quot;</span><span class="p">,</span> <span class="s2">&quot;G&quot;</span><span class="p">,</span> <span class="s2">&quot;H&quot;</span><span class="p">,</span> <span class="s2">&quot;J&quot;</span><span class="p">,</span> <span class="s2">&quot;K&quot;</span><span class="p">,</span> <span class="s2">&quot;L&quot;</span><span class="p">,</span> <span class="s2">&quot;;&quot;</span><span class="p">,</span> <span class="s2">&quot;&#39;&quot;</span><span class="p">],</span>
+            <span class="p">[</span><span class="s2">&quot;Z&quot;</span><span class="p">,</span> <span class="s2">&quot;X&quot;</span><span class="p">,</span> <span class="s2">&quot;C&quot;</span><span class="p">,</span> <span class="s2">&quot;V&quot;</span><span class="p">,</span> <span class="s2">&quot;B&quot;</span><span class="p">,</span> <span class="s2">&quot;N&quot;</span><span class="p">,</span> <span class="s2">&quot;M&quot;</span><span class="p">,</span> <span class="s2">&quot;,&quot;</span><span class="p">,</span> <span class="s2">&quot;.&quot;</span><span class="p">,</span> <span class="s2">&quot;/&quot;</span><span class="p">]]</span>
+
 <span class="k">def</span> <span class="nf">print_matrix2</span><span class="p">(</span><span class="n">matrix</span><span class="p">):</span>
         <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">matrix</span><span class="p">:</span>  <span class="c1"># Iterates through each &quot;row&quot; of matrix. Row is a dummy variable, it could technically be anything. It iterates through each value of matrix and each value is it&#39;s own list. in this syntax the list is stored in &quot;row&quot;.</span>
             <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">row</span><span class="p">:</span>  <span class="c1"># Iterates through each value in row. Again col, column, is a dummy variable. Each value in row is stored in col.</span>
