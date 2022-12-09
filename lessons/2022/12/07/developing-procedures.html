@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      3 min read
+      4 min read
     
 </span></p>
 
@@ -153,8 +153,13 @@ window.onload = wrap_img;
 <span class="n">outsideTemp</span> <span class="o">=</span> <span class="n">outsideTemp</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">'m'</span><span class="p">,</span> <span class="s1">'000'</span><span class="o">*</span><span class="mi">2</span><span class="p">)</span>
 <span class="n">outsideTemp</span> <span class="o">=</span> <span class="n">outsideTemp</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">'b'</span><span class="p">,</span> <span class="s1">'000'</span><span class="o">*</span><span class="mi">3</span><span class="p">)</span>
 <span class="k">def</span> <span class="nf">convertFahrenheit</span><span class="p">(</span><span class="n">temp</span><span class="p">):</span>
-    <span class="c1"># code goes here</span>
     <span class="n">celsius</span> <span class="o">=</span> <span class="p">(</span><span class="n">temp</span> <span class="o">-</span> <span class="mi">32</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="mi">5</span><span class="o">/</span><span class="mi">9</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">celsius</span> <span class="o">&gt;=</span> <span class="p">(</span><span class="mi">1000000000</span><span class="p">):</span>
+        <span class="n">celsius</span> <span class="o">=</span> <span class="nb">str</span><span class="p">((</span><span class="nb">round</span><span class="p">(</span><span class="n">celsius</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="mi">1000000000</span><span class="p">)))</span> <span class="o">+</span> <span class="s2">"b"</span>
+    <span class="k">elif</span> <span class="n">celsius</span> <span class="o">&gt;=</span> <span class="p">(</span><span class="mi">1000000</span><span class="p">):</span>
+        <span class="n">celsius</span> <span class="o">=</span> <span class="nb">str</span><span class="p">((</span><span class="nb">round</span><span class="p">(</span><span class="n">celsius</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="mi">1000000</span><span class="p">)))</span> <span class="o">+</span> <span class="s2">"m"</span>
+    <span class="k">elif</span> <span class="n">celsius</span> <span class="o">&gt;=</span> <span class="mi">1000</span><span class="p">:</span>
+        <span class="n">celsius</span> <span class="o">=</span> <span class="nb">str</span><span class="p">((</span><span class="nb">round</span><span class="p">(</span><span class="n">celsius</span><span class="p">)</span> <span class="o">/</span> <span class="mi">1000</span><span class="p">))</span> <span class="o">+</span> <span class="s2">"k"</span>
     <span class="k">return</span> <span class="n">celsius</span>
 
 <span class="n">convertFahrenheit</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">outsideTemp</span><span class="p">))</span>
@@ -172,7 +177,7 @@ window.onload = wrap_img;
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>555537.7777777778</pre>
+<pre>'555555.555555538b'</pre>
 </div>
 
 </div>
