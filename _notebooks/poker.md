@@ -41,8 +41,15 @@
 </head>
 <body>
 
-<button class="button button1">Green</button>
+<button class="button button1" id = "start_btn" onclick="ask_name()">Green</button>
 <button class="button button2">Blue</button>
+
+<script>
+function ask_name() {
+    var start_btn = document.getElementById("start_btn");
+    start_btn.disabled = true;
+}
+</script>
 
 </body>
 </html>
